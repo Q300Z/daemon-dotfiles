@@ -88,11 +88,11 @@ Others:
 
 - Konsole color scheme:
 
-        sudo cp -u /konsole-colors/  /usr/share/konsole/.
+        sudo cp -u konsole-colors/*  /usr/share/konsole/.
 
 - LibreOffice icons:
 
-        sudo cp -u /libreoffice-icons/.  /usr/lib/libreoffice/share/config/.
+        sudo cp -u libreoffice-icons/*  /usr/lib/libreoffice/share/config/.
 
 
 

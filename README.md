@@ -28,14 +28,15 @@ cd into it
 
 Copy the files in their respective directories
 
-    mkdir -p ~/.local/share/plasma/desktoptheme && cp -r plasma-styles/. ~/.local/share/plasma/desktoptheme/
-    cp -r colors/. ~/.local/share/color-schemes/
-    mkdir -p ~/.local/share/aurorae/themes && cp -r window-borders/. ~/.local/share/aurorae/themes/
-    cp -r icons/Daemon ~/.local/share/icons/
-    cp -r kvantum-themes/. ~/.config/Kvantum/
-    mkdir -p ~/.local/share/plasma/look-and-feel && cp -r global-theme/. ~/.local/share/plasma/look-and-feel/
-    cp -r kwin-scripts/flex-grid/. ~/.local/share/kwin/scripts/flexGrid/contents/code/
-    cp -r splash-screen/. ~/.local/share/plasma/look-and-feel/
+    mkdir -p ~/.local/share/plasma/desktoptheme && cp -ru plasma-styles/. ~/.local/share/plasma/desktoptheme/
+    cp -ru colors/. ~/.local/share/color-schemes/
+    mkdir -p ~/.local/share/aurorae/themes && cp -ru window-borders/. ~/.local/share/aurorae/themes/
+    cp -ru icons/Daemon ~/.local/share/icons/
+    cp -ru kvantum-themes/. ~/.config/Kvantum/
+    mkdir -p ~/.local/share/plasma/look-and-feel && cp -ru global-theme/. ~/.local/share/plasma/look-and-feel/
+    cp -ru kwin-scripts/flex-grid/. ~/.local/share/kwin/scripts/flexGrid/contents/code/
+    cp -ru splash-screen/. ~/.local/share/plasma/look-and-feel/
+    cp -ru discord/. ~/.config/BetterDiscord/themes/
 
 
 
@@ -79,7 +80,7 @@ Others:
 
 - Discord theme for BetterDiscord:
 
-        cp -r discord/. ~/.config/BetterDiscord/themes/
+        cp -ru discord/. ~/.config/BetterDiscord/themes/
 
 - Firefox theme: https://color.firefox.com/?theme=XQAAAAI2AQAAAAAAAABBKYhm849SCia3ftKEGccwS-xMDPrxiv6HGJPbXvFJjzza9aH0u2bKZrTXsKIKzakRjROnrUY-NkJX-YB7CghWuI1DF6B_g23WF3XEe9AfXuAcOldc2vl4ldKwbqDjvu_aovYKd3iF0CX03uPPM8nwNFM4575bBSZtcmybYKWrBrM2fuDQtO8tryjxuJdJGEElnbLz_KxsO3rQTKv13RIJkpjmeNMayn5ie30BLo4f_6LQ4AA
 
@@ -87,11 +88,11 @@ Others:
 
 - Konsole color scheme:
 
-        sudo cp /konsole-colors/  /usr/share/konsole/.
+        sudo cp -u /konsole-colors/  /usr/share/konsole/.
 
 - LibreOffice icons:
 
-        sudo cp /libreoffice-icons/.  /usr/lib/libreoffice/share/config/.
+        sudo cp -u /libreoffice-icons/.  /usr/lib/libreoffice/share/config/.
 
 
 

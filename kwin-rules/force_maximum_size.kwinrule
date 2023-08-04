@@ -1,0 +1,6 @@
+[Force maximum size]
+Description=Force maximum size
+maxsize=1776,1045
+maxsizerule=2
+types=289
+wmclasscomplete=true

@@ -15,7 +15,7 @@ var layout = {
                     "wallpaperplugin": "org.kde.image"
                 },
                 "/Wallpaper/org.kde.image/General": {
-                    "Image": "/home/mathis_kde/Pictures/Wallpapers/CyberWallLaptop3.png"
+                    "Image": "/home/tboutin/Téléchargements/daemon-dotfiles/Wallpapers/CyberWallLaptop3.png"
                 }
             },
             "wallpaperPlugin": "org.kde.image"
@@ -74,7 +74,7 @@ var layout = {
                     "locked": "true"
                 },
                 "/Wallpaper/org.kde.image/General": {
-                    "Image": "file:///home/mathis_kde/Pictures/Wallpapers/CyberWallLaptop3.png",
+                    "Image": "file:///home/tboutin/Téléchargements/daemon-dotfiles/Wallpapers/CyberWallLaptop3.png",
                     "SlidePaths": "/usr/share/wallpapers"
                 }
             },
@@ -105,7 +105,7 @@ var layout = {
                         },
                         "/General": {
                             "favoritesPortedToKAstats": "true",
-                            "icon": "/home/mathis_kde/Pictures/Daemon Logo.png",
+                            "icon": "/home/tboutin/Téléchargements/daemon-dotfiles/icons/Daemon Logo.png",
                             "systemFavorites": "suspend\\,hibernate\\,reboot\\,shutdown"
                         }
                     },

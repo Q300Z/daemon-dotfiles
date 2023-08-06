@@ -126,8 +126,8 @@ elif [ "$install_choice" = "2" ]; then
   version="Daemon"
 fi
 
-js_file_original="global-theme/"+$version+"/contents/layouts/DONT_TOUCH_org.kde.plasma.desktop-layout.js"
-js_file="global-theme/"+$version+"/contents/layouts/org.kde.plasma.desktop-layout.js"
+js_file_original="global-theme/"$version"/contents/layouts/DONT_TOUCH_org.kde.plasma.desktop-layout.js"
+js_file="global-theme/"$version"/contents/layouts/org.kde.plasma.desktop-layout.js"
 
 if [ -f "$js_file_original" ]; then
     cp $js_file_original $js_file

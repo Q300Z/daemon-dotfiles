@@ -118,8 +118,16 @@ check_and_copy_directory splash-screen/. "Écran de démarrage" ~/.local/share/p
 check_and_install_fonts fonts/.
 check_and_copy_directory cursor/. "Cursor Personaliser" ~/.icons/
 
-js_file_original="global-theme/org.kde.plasma.daemon/contents/layouts/DONT_TOUCH_org.kde.plasma.desktop-layout.js"
-js_file="global-theme/org.kde.plasma.daemon/contents/layouts/org.kde.plasma.desktop-layout.js"
+# Installation du Global thème
+read -p "Quelle version voulez-vous : Desktop | Portable ? (1/2) " install_choice
+if [ "$install_choice" = "1" ]; then
+  version="org.kde.plasma.daemon"
+elif [ "$install_choice" = "2" ]; then
+  version="Daemon"
+fi
+
+js_file_original="global-theme/"+$version+"/contents/layouts/DONT_TOUCH_org.kde.plasma.desktop-layout.js"
+js_file="global-theme/"+$version+"/contents/layouts/org.kde.plasma.desktop-layout.js"
 
 if [ -f "$js_file_original" ]; then
     cp $js_file_original $js_file
@@ -127,6 +135,7 @@ if [ -f "$js_file_original" ]; then
         sed -i "s|CHANGE_ME_WALLPAPER|"file://$WALLPAPER_PATH"|g" "$js_file"
         sed -i "s|CHANGE_ME_ICON|"file://$ICON_PATH"|g" "$js_file"
         check_and_copy_directory global-theme/. "Thème Look and Feel" ~/.local/share/plasma/look-and-feel/
+        rm $js_file
     else
         prompt -e "Impossible de générer le fichier $js_file"
         prompt -e "Le fichier $js_file_original est inaccessible"

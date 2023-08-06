@@ -126,25 +126,16 @@ elif [ "$install_choice" = "2" ]; then
   version="Daemon"
 fi
 
-js_file_original="global-theme/"$version"/contents/layouts/DONT_TOUCH_org.kde.plasma.desktop-layout.js"
-js_file="global-theme/"$version"/contents/layouts/org.kde.plasma.desktop-layout.js"
+js_file_original="global-theme/$version/contents/layouts/DONT_TOUCH_org.kde.plasma.desktop-layout.js"
+js_file="global-theme/$version/contents/layouts/org.kde.plasma.desktop-layout.js"
 
-if [ -f "$js_file_original" ]; then
-  if ! [ -f "$js_file" ]; then
-    cp $js_file_original $js_file
-  fi
-  if [ -f "$js_file" ]; then
-      sed -i "s|CHANGE_ME_WALLPAPER|"file://$WALLPAPER_PATH"|g" "$js_file"
-      sed -i "s|CHANGE_ME_ICON|"file://$ICON_PATH"|g" "$js_file"
-      check_and_copy_directory global-theme/. "Thème Look and Feel" ~/.local/share/plasma/look-and-feel/
-      rm $js_file
-  else
-      prompt -e "Impossible de générer le fichier $js_file"
-      prompt -e "Le fichier $js_file_original est inaccessible"
-  fi
-else
-  prompt -e "Le fichier '$js_file' n'existe pas."
+if ! [ -f "$js_file" ]; then
+    cp "$js_file_original" "$js_file" 
 fi
+sed -i "s|CHANGE_ME_WALLPAPER|"file://$WALLPAPER_PATH"|g" "$js_file"
+sed -i "s|CHANGE_ME_ICON|"file://$ICON_PATH"|g" "$js_file"
+check_and_copy_directory global-theme/. "Thème Look and Feel" ~/.local/share/plasma/look-and-feel/
+
 
 # Installation du Script Kwin FlexGrid
 read -p "Voulez-vous installer le Script Kwin FlexGrid ? (o/N) " install_choice

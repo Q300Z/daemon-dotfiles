@@ -1,0 +1,7 @@
+[Forcemaximumsize]
+Description=Forcemaximumsize
+maxsize=1795,1045
+maxsizerule=2
+minsize=1025,720
+minsizerule=2
+wmclasscomplete=true

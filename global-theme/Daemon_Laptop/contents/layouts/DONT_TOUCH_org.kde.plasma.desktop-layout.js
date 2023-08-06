@@ -52,7 +52,7 @@ var layout = {
         },
         "/General": {
           ToolBoxButtonState: "topcenter",
-          ToolBoxButtonX: "439",
+          ToolBoxButtonX: "554",
           ToolBoxButtonY: "36",
         },
         "/Wallpaper/org.kde.image/General": {
@@ -112,7 +112,7 @@ var layout = {
             "/General": {
               iconSpacing: "0",
               launchers:
-                "applications:systemsettings.desktop,preferred://filemanager,applications:org.kde.konsole.desktop",
+                "applications:systemsettings.desktop,preferred://filemanager,applications:brave-browser.desktop,applications:org.kde.konsole.desktop",
               maxStripes: "1",
             },
           },
@@ -174,7 +174,7 @@ var layout = {
         {
           config: {
             "/": {
-              PreloadWeight: "65",
+              PreloadWeight: "70",
             },
           },
           plugin: "org.kde.plasma.systemtray",

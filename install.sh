@@ -121,20 +121,23 @@ check_and_copy_directory cursor/. "Cursor Personaliser" ~/.icons/
 # Installation du Global thème
 read -p "Quelle version voulez-vous : Desktop | Portable ? (1/2) " install_choice
 if [ "$install_choice" = "1" ]; then
-  version="org.kde.plasma.daemon"
+  version="Daemon_Desktop"
 elif [ "$install_choice" = "2" ]; then
-  version="Daemon"
+  version="Daemon_Laptop"
 fi
 
 js_file_original="global-theme/$version/contents/layouts/DONT_TOUCH_org.kde.plasma.desktop-layout.js"
 js_file="global-theme/$version/contents/layouts/org.kde.plasma.desktop-layout.js"
 
-if ! [ -f "$js_file" ]; then
-    cp "$js_file_original" "$js_file" 
+if ! [ -f "$js_file_original" ]; then
+  cp "$js_file_original" "$js_file" 
+  sed -i "s|CHANGE_ME_WALLPAPER|"file://$WALLPAPER_PATH"|g" "$js_file"
+  sed -i "s|CHANGE_ME_ICON|"file://$ICON_PATH"|g" "$js_file"
+  check_and_copy_directory global-theme/$version "Thème Global Deamon" ~/.local/share/plasma/look-and-feel/
+else
+  prompt -e "Echec de l'installation du Thème Global KDE car $js_file_original n'est pas présent."
 fi
-sed -i "s|CHANGE_ME_WALLPAPER|"file://$WALLPAPER_PATH"|g" "$js_file"
-sed -i "s|CHANGE_ME_ICON|"file://$ICON_PATH"|g" "$js_file"
-check_and_copy_directory global-theme/. "Thème Look and Feel" ~/.local/share/plasma/look-and-feel/
+
 
 
 # Installation du Script Kwin FlexGrid

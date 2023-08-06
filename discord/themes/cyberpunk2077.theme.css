@@ -2,20 +2,18 @@
  * @name Cyberpunk 2077
  * @author Patryk Bielanin | bielak#2500
  * @description Cyberpunk 2077 UI styled theme for better discord
- * @version 1.0.3
+ * @version 1.0.6
  * @source https://github.com/PatrykBielanin/discord-cyberpunk2077-theme
  * @website https://github.com/PatrykBielanin/discord-cyberpunk2077-theme
  * @donate https://www.paypal.com/donate/?hosted_button_id=PGVKB863SXYUQ
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani');
 @import url('https://patrykbielanin.github.io/discord-cyberpunk2077-theme/base.css');
-@import url('https://dl.dafont.com/dl/?f=prototype');
 
 :root {
     --background-primary: #111e29;
     --background-secondary: #070d1a;
-    --font-primary: 'Prototype'; /* Font */
+    --font-primary: 'Blender Pro'; /* Font */
     --primary-text-color: lightgray; /* Font color */
 
     --primary: 17, 30, 41;  /* Background color mainly used for popups */

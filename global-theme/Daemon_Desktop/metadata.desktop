@@ -1,12 +1,19 @@
 [Desktop Entry]
-Comment=Cyberpunk theme
-Name=Daemon 1
+Comment=Cyberpunk theme (Desktop version)
+Encoding=UTF-8
+Keywords=Desktop;Workspace;Appearance;Look and Feel;Logout;Lock;Suspend;Shutdown;Hibernate;Cyberpunk;Laptop;
+Name=Daemon Desktop
+Type=Service
+X-KDE-ParentApp=
 X-KDE-PluginInfo-Author=Mathis Paquet
 X-KDE-PluginInfo-Category=Plasma Look And Feel
 X-KDE-PluginInfo-Email=mathispaquet362@gmail.com
 X-KDE-PluginInfo-EnabledByDefault=true
 X-KDE-PluginInfo-License=LGPL 2.1+
-X-KDE-PluginInfo-Name=org.kde.plasma.daemon
-X-KDE-PluginInfo-Version=0.1
-X-KDE-PluginInfo-Website=none
+X-KDE-PluginInfo-Name=Daemon_desktop
+X-KDE-PluginInfo-Version=1.0
+X-KDE-PluginInfo-Website=https://github.com/MathisP75/daemon-dotfiles
 X-KDE-ServiceTypes=Plasma/LookAndFeel
+X-KDE-fallbackPackage=org.kde.breeze.desktop
+X-KPackage-Dependencies=kns://icons.knsrc/api.kde-look.org/1914825,kns://icons.knsrc/api.kde-look.org/1753249
+X-Plasma-MainScript=defaults

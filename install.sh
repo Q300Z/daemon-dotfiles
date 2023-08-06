@@ -129,11 +129,12 @@ fi
 js_file_original="global-theme/$version/contents/layouts/DONT_TOUCH_org.kde.plasma.desktop-layout.js"
 js_file="global-theme/$version/contents/layouts/org.kde.plasma.desktop-layout.js"
 
-if ! [ -f "$js_file_original" ]; then
-  cp "$js_file_original" "$js_file" 
+if [ -f "$js_file_original" ]; then
+  cp -T "$js_file_original" "$js_file" 
   sed -i "s|CHANGE_ME_WALLPAPER|"file://$WALLPAPER_PATH"|g" "$js_file"
   sed -i "s|CHANGE_ME_ICON|"file://$ICON_PATH"|g" "$js_file"
   check_and_copy_directory global-theme/$version "Thème Global Deamon" ~/.local/share/plasma/look-and-feel/
+  rm $js_file
 else
   prompt -e "Echec de l'installation du Thème Global KDE car $js_file_original n'est pas présent."
 fi
@@ -150,7 +151,7 @@ fi
 generate_kwin_rule kwin-rules/force_maximum_size.kwinrule
 
 # Installation des théme custom d'application tiers
-check_and_copy_directory discord/. "Thème DiscordBetter" ~/.config/BetterDiscord/themes/
+#check_and_copy_directory discord/. "Thème/plugins DiscordBetter" ~/.config/BetterDiscord/
 #check_and_copy_directory libreoffice-icons/. "Pack d'icon LibreOffice" /usr/lib/libreoffice/share/config/
 #check_and_copy_directory konsole-colors/ "Thème Konsole" /usr/share/konsole/.
 

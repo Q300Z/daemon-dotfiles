@@ -1,0 +1,38 @@
+{
+    "currentVersionInfo": {
+        "version": "0.10.1",
+        "hasShownChangelog": true
+    },
+    "settings": {
+        "global": {
+            "important": true,
+            "saturation": false
+        },
+        "modules": {
+            "typing": false,
+            "voice": false,
+            "mentions": false,
+            "chat": false,
+            "botTags": false,
+            "memberList": false
+        },
+        "popouts": {
+            "username": false,
+            "discriminator": false,
+            "nickname": true,
+            "fallback": true
+        },
+        "modals": {
+            "username": true,
+            "discriminator": false
+        },
+        "auditLog": {
+            "username": true,
+            "discriminator": false
+        },
+        "account": {
+            "username": true,
+            "discriminator": false
+        }
+    }
+}

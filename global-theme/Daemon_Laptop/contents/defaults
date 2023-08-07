@@ -1,5 +1,6 @@
 [kcminputrc][Mouse]
 cursorTheme=Bibata-Original-Classic
+cursorSize=22
 
 [kdeglobals][General]
 ColorScheme=Daemon

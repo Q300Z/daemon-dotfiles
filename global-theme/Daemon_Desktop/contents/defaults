@@ -4,6 +4,9 @@ cursorTheme=Bibata-Original-Classic
 [kdeglobals][General]
 ColorScheme=Daemon
 
+[kdeglobals][Icons]
+Theme=Daemon
+
 [kdeglobals][KDE]
 widgetStyle=kvantum-dark
 

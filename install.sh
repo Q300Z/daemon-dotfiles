@@ -133,8 +133,9 @@ if [ -f "$js_file_original" ]; then
   cp -T "$js_file_original" "$js_file" 
   sed -i "s|CHANGE_ME_WALLPAPER|"file://$WALLPAPER_PATH"|g" "$js_file"
   sed -i "s|CHANGE_ME_ICON|"file://$ICON_PATH"|g" "$js_file"
-  check_and_copy_directory global-theme/$version "Thème Global Deamon" ~/.local/share/plasma/look-and-feel/$version
-  rm $js_file
+  mv $js_file_original .
+  check_and_copy_directory global-theme/$version "Thème Global Deamon" ~/.local/share/plasma/look-and-feel/org.kde.plasma.daemon
+  mv "DONT_TOUCH_org.kde.plasma.desktop-layout.js" $js_file_original
 else
   prompt -e "Echec de l'installation du Thème Global KDE car $js_file_original n'est pas présent."
 fi

@@ -13,38 +13,34 @@ var layout = {
             "/Appearance": {
               chartFace: "org.kde.ksysguard.horizontalbars",
               showTitle: "false",
-              title: "Total usage",
+              title: "Daemon",
             },
             "/ConfigDialog": {
-              DialogHeight: "450",
-              DialogWidth: "600",
+              DialogHeight: "630",
+              DialogWidth: "840",
             },
             "/SensorColors": {
-              "cpu/all/usage": "65,168,160",
-              "disk/all/read": "168,65,73",
-              "disk/all/write": "65,168,160",
-              "gpu/gpu0/usage": "168,65,80",
-              "memory/physical/usedPercent": "65,168,113",
+              "cpu/all/usage": "91,238,220",
+              "gpu/all/usage": "48,251,240",
+              "memory/physical/usedPercent": "91,238,220",
             },
             "/Sensors": {
               highPrioritySensorIds:
-                '["cpu/all/usage","memory/physical/usedPercent","gpu/gpu0/usage"]',
-              lowPrioritySensorIds: "[]",
-              totalSensors: "[]",
+                '["cpu/all/usage","gpu/all/usage","memory/physical/usedPercent"]',
             },
           },
           "geometry.height": 0,
           "geometry.width": 0,
           "geometry.x": 0,
           "geometry.y": 0,
-          plugin: "org.kde.plasma.systemmonitor.cpu",
-          title: "Total usage",
+          plugin: "org.kde.plasma.systemmonitor",
+          title: "Daemon",
         },
       ],
       config: {
         "/": {
-          "ItemGeometries-1920x1080": "Applet-114:1264,848,352,112,0;",
-          ItemGeometriesHorizontal: "Applet-114:1264,848,352,112,0;",
+          "ItemGeometries-1920x1080": "Applet-0:1280,848,368,112,0;",
+          ItemGeometriesHorizontal: "Applet-0:1280,848,368,112,0;",
           formfactor: "0",
           immutability: "1",
           lastScreen: "0",
@@ -52,8 +48,8 @@ var layout = {
         },
         "/General": {
           ToolBoxButtonState: "topcenter",
-          ToolBoxButtonX: "554",
-          ToolBoxButtonY: "36",
+          ToolBoxButtonX: "439",
+          ToolBoxButtonY: "38",
         },
         "/Wallpaper/org.kde.image/General": {
           Image: "CHANGE_ME_WALLPAPER",
@@ -106,25 +102,20 @@ var layout = {
         {
           config: {
             "/ConfigDialog": {
-              DialogHeight: "660",
-              DialogWidth: "880",
+              DialogHeight: "1024",
+              DialogWidth: "1797",
             },
             "/General": {
               iconSpacing: "0",
               launchers:
-                "applications:systemsettings.desktop,preferred://filemanager,applications:brave-browser.desktop,applications:org.kde.konsole.desktop",
+                "applications:systemsettings.desktop,preferred://filemanager,applications:vivaldi.desktop,applications:brave.desktop,applications:org.kde.konsole.desktop",
               maxStripes: "1",
             },
           },
           plugin: "org.kde.plasma.icontasks",
         },
         {
-          config: {
-            "/ConfigDialog": {
-              DialogHeight: "540",
-              DialogWidth: "720",
-            },
-          },
+          config: {},
           plugin: "org.kde.plasma.pager",
         },
       ],
@@ -140,7 +131,7 @@ var layout = {
           DialogWidth: "146",
         },
       },
-      height: 6.9375,
+      height: 5.75,
       hiding: "normal",
       location: "left",
       maximumLength: 67.5,
@@ -168,13 +159,9 @@ var layout = {
           plugin: "org.kde.plasma.panelspacer",
         },
         {
-          config: {},
-          plugin: "org.kde.plasma.nightcolorcontrol",
-        },
-        {
           config: {
             "/": {
-              PreloadWeight: "70",
+              PreloadWeight: "60",
             },
           },
           plugin: "org.kde.plasma.systemtray",
@@ -189,7 +176,23 @@ var layout = {
           plugin: "org.kde.plasma.panelspacer",
         },
         {
-          config: {},
+          config: {
+            "/": {
+              PreloadWeight: "55",
+              popupHeight: "450",
+              popupWidth: "396",
+            },
+            "/Appearance": {
+              dateDisplayFormat: "BesideTime",
+              enabledCalendarPlugins:
+                "/usr/lib/qt/plugins/plasmacalendarplugins/holidaysevents.so",
+              showSeconds: "true",
+            },
+            "/ConfigDialog": {
+              DialogHeight: "1022",
+              DialogWidth: "1770",
+            },
+          },
           plugin: "org.kde.plasma.digitalclock",
         },
         {
@@ -214,11 +217,11 @@ var layout = {
           DialogWidth: "1920",
         },
       },
-      height: 2.25,
+      height: 2.375,
       hiding: "normal",
       location: "top",
-      maximumLength: 110.0625,
-      minimumLength: 110.0625,
+      maximumLength: 110.25,
+      minimumLength: 110.25,
       offset: 0,
     },
   ],
